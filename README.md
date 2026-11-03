@@ -1,6 +1,6 @@
 # 🪐 Caelestia × Kali — Dotfiles
 
-![Bureau Hyprland + Caelestia — foot (greeting Caelestia + fastfetch) et htop sous l'effet verre Hyprglass](assets/desktop.png)
+![Bureau Hyprland + Caelestia (workspace 4) — fastfetch, cbonsai et htop sous l'effet verre Hyprglass](assets/desktop.png)
 
 
 Reconstruction complète de mon environnement **Hyprland + Caelestia** sur une
