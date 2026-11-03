@@ -1,0 +1,11 @@
+# Jamais de secrets / d'état machine
+*.bak
+*.bak-*
+*.sqlite
+*.log
+scheme/current.*
+.cache/
+# Fonds d'écran exclus du dépôt (art tiers, 1.2 Go) — voir wallpapers/README.md
+wallpapers/*
+!wallpapers/README.md
+!wallpapers/.gitkeep

@@ -1,0 +1,62 @@
+{
+  "appearance": {
+    "transparency": {
+      "enabled": true,
+      "base": 0.55,
+      "layers": 0.35
+    },
+    "font": {
+      "headline": {
+        "family": "Google Sans Flex"
+      },
+      "title": {
+        "family": "Google Sans Flex"
+      },
+      "body": {
+        "family": "Google Sans Flex"
+      },
+      "label": {
+        "family": "Google Sans Flex"
+      },
+      "mono": {
+        "family": "Maple Mono NF"
+      }
+    }
+  },
+  "paths": {
+    "wallpaperDir": "__HOME__/Pictures/wallpaper"
+  },
+  "bar": {
+    "persistent": false,
+    "showOnHover": true
+  },
+  "services": {
+    "weatherUnits": "Celsius",
+    "clockFormat": "TwentyFourHour"
+  },
+  "border": {
+    "thickness": 0,
+    "rounding": 0
+  },
+  "general": {
+    "idle": {
+      "timeouts": [
+        {
+          "timeout": 21600,
+          "idleAction": "lock"
+        },
+        {
+          "timeout": 21610,
+          "idleAction": "dpms off",
+          "returnAction": "dpms on"
+        },
+        {
+          "timeout": 21620,
+          "idleAction": [
+            "suspendThenHibernate"
+          ]
+        }
+      ]
+    }
+  }
+}
