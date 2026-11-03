@@ -12,7 +12,7 @@ clavier, thèmes GTK/Qt, terminaux et prompt.
 ## ⚡ Installation rapide
 
 ```bash
-git clone https://github.com/VOTRE-COMPTE/caelestia-kali-dotfiles.git
+git clone https://github.com/sapeurpac/caelestia-kali-dotfiles.git
 cd caelestia-kali-dotfiles
 ./install.sh --deps        # installe les paquets apt + pose les dotfiles
 ```
