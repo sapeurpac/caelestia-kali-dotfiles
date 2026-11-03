@@ -130,6 +130,28 @@ if [ ! -x "$HOME/.local/pywal_venv/bin/wal" ]; then
     warn "pywal non installé — crée le venv manuellement (voir README)"
 fi
 
+# Amorçage pywal : kitty inclut ~/.cache/wal/colors-kitty.conf. Sur une machine
+# neuve ce fichier n'existe pas encore -> kitty râle au 1er lancement. On génère
+# le cache depuis un fond déjà présent, sinon on pose un stub neutre. Dès que
+# l'utilisateur lance autowall.sh / Super+Shift+W, tout est régénéré pour de bon.
+WAL="$HOME/.local/pywal_venv/bin/wal"
+FIRST_WALL="$(find "$HOME/Pictures/wallpaper" -maxdepth 1 -type f \
+  \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) 2>/dev/null | head -n1)"
+if [ -x "$WAL" ] && [ -n "$FIRST_WALL" ]; then
+  say "Amorçage pywal depuis $(basename "$FIRST_WALL")…"
+  "$WAL" -q -e -n -s -i "$FIRST_WALL" && ok "cache pywal généré (couleurs kitty)" || \
+    warn "amorçage pywal échoué (sera régénéré au 1er Super+Shift+W)"
+elif [ ! -f "$HOME/.cache/wal/colors-kitty.conf" ]; then
+  mkdir -p "$HOME/.cache/wal"
+  cat > "$HOME/.cache/wal/colors-kitty.conf" <<'STUB'
+# Stub provisoire — sera écrasé par pywal au 1er changement de fond (Super+Shift+W).
+foreground #c5c2c2
+background #1a1a1a
+cursor     #c5c2c2
+STUB
+  ok "stub colors-kitty.conf posé (évite le warning kitty au 1er lancement)"
+fi
+
 cat <<EOF
 
 $(ok "Dotfiles posés.")

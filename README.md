@@ -1,5 +1,8 @@
 # 🪐 Caelestia × Kali — Dotfiles
 
+![Bureau Hyprland + Caelestia — foot (greeting Caelestia + fastfetch) et htop sous l'effet verre Hyprglass](assets/desktop.png)
+
+
 Reconstruction complète de mon environnement **Hyprland + Caelestia** sur une
 **Kali Linux standard** : réglages visuels, animations, barre (hotbar), raccourcis
 clavier, thèmes GTK/Qt, terminaux et prompt.
